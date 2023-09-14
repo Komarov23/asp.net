@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Учёба\\.Net\\lab1\\lab1\\lab1.csproj": {}
+    "D:\\Учёба\\.Net\\lab1\\lab1\\asp.net\\lab1.csproj": {}
   },
   "projects": {
-    "D:\\Учёба\\.Net\\lab1\\lab1\\lab1.csproj": {
+    "D:\\Учёба\\.Net\\lab1\\lab1\\asp.net\\lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Учёба\\.Net\\lab1\\lab1\\lab1.csproj",
+        "projectUniqueName": "D:\\Учёба\\.Net\\lab1\\lab1\\asp.net\\lab1.csproj",
         "projectName": "lab1",
-        "projectPath": "D:\\Учёба\\.Net\\lab1\\lab1\\lab1.csproj",
+        "projectPath": "D:\\Учёба\\.Net\\lab1\\lab1\\asp.net\\lab1.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Учёба\\.Net\\lab1\\lab1\\obj\\",
+        "outputPath": "D:\\Учёба\\.Net\\lab1\\lab1\\asp.net\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "INIFileParserDotNetCore": {
+              "target": "Package",
+              "version": "[2.5.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Ini": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

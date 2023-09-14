@@ -48,3 +48,8 @@ D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\refint\lab1.dll
 D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\lab1.pdb
 D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\lab1.genruntimeconfig.cache
 D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\ref\lab1.dll
+D:\Учёба\.Net\lab1\lab1\asp.net\bin\Debug\net7.0\Microsoft.json
+D:\Учёба\.Net\lab1\lab1\asp.net\bin\Debug\net7.0\INIFileParserDotNetCore.dll
+D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\lab1.csproj.AssemblyReference.cache
+D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\lab1.csproj.CopyComplete
+D:\Учёба\.Net\lab1\lab1\asp.net\bin\Debug\net7.0\Me.json

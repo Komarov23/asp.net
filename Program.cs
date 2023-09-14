@@ -1,39 +1,49 @@
+using System;
+using System.IO;
+using System.Text.Json;
+using System.Xml;
+using System.Text.Json.Serialization;
+using Microsoft.Extensions.Configuration.Ini;
+using Comp;
+using Me;
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-Company comp1 = new Company("Nikel", 2, "grivnyas", 4.5f);
+string pathJson = "Microsoft.json";
+string pathXML = "Google.xml";
+string pathIni = "D:\\Учёба\\.Net\\lab1\\lab1\\asp.net\\Apple.ini";
+string pathMe = "Me.json";
 
-app.MapGet("/info", () => comp1.Info());
+MySelf mySelf = MySelf.meFromJson(pathMe);
 
-app.MapGet("/", () => comp1.RandNum());
+Company Microsoft = Company.compFromJson(pathJson);
+Company Google = Company.compFromXML(pathXML);
+Company Apple = Company.compFromIni(pathIni);
+
+app.MapGet("/info", () => Apple.Info());
+
+app.MapGet("/", () => Google.RandNum());
+
+app.MapGet("/max", () => workersMax([Microsoft, Google, Apple]).name);
+
+app.MapGet("/me", () => mySelf.MyInfo());
 
 app.Run();
 
-class Company
+Company workersMax(Company[] companies)
 {
-    string name { get; set; }
-    int income_money { get; set; }
+    int maxWorkers = 0;
+    Company companyWithMaxWorkers = null;
 
-    string currency { get; set; }
-
-    float workers { get; set; }
-
-    public Company(string name, int income_money, string currency, float workers)
+    foreach (Company company in companies)
     {
-        this.name = name;
-        this.income_money = income_money;
-        this.currency = currency;
-        this.workers = workers;
+        if (company.workers > maxWorkers)
+        {
+            maxWorkers = company.workers;
+            companyWithMaxWorkers = company;
+        }
     }
 
-    public string Info()
-    {
-        return ("Company name: " + this.name + "\nIncome money: " + this.income_money + " " +this.currency + "\nWorkers amount: " + this.workers); 
-    }
-
-    public int RandNum()
-    {
-        return (new Random()).Next(0, 101);
-    }
+    return companyWithMaxWorkers;
 }
-
