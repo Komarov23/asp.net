@@ -6,9 +6,15 @@ using System.Text.Json.Serialization;
 using Microsoft.Extensions.Configuration.Ini;
 using Comp;
 using Me;
+using lab1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<CalcService>();
+builder.Services.AddControllers();
+builder.Services.AddTransient<TimeOfDayService>();
 var app = builder.Build();
+app.MapControllers();
+
 
 string pathJson = "Microsoft.json";
 string pathXML = "Google.xml";
