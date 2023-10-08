@@ -53,3 +53,5 @@ D:\Учёба\.Net\lab1\lab1\asp.net\bin\Debug\net7.0\INIFileParserDotNetCore.dl
 D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\lab1.csproj.AssemblyReference.cache
 D:\Учёба\.Net\lab1\lab1\asp.net\obj\Debug\net7.0\lab1.csproj.CopyComplete
 D:\Учёба\.Net\lab1\lab1\asp.net\bin\Debug\net7.0\Me.json
+D:\Учёба\.Net\lab1\lab1\asp.net\bin\Debug\net7.0\books.json
+D:\Учёба\.Net\lab1\lab1\asp.net\bin\Debug\net7.0\profiles.json

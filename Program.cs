@@ -8,6 +8,7 @@ using Comp;
 using Me;
 using lab1.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<CalcService>();
 builder.Services.AddControllers();
@@ -34,6 +35,7 @@ app.MapGet("/", () => Google.RandNum());
 app.MapGet("/max", () => workersMax([Microsoft, Google, Apple]).name);
 
 app.MapGet("/me", () => mySelf.MyInfo());
+
 
 app.Run();
 
