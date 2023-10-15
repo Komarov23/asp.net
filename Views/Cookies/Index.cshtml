@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Встановити куки";
+}
+
+<h2>Встановити куки</h2>
+
+<form action="/Cookies/SetCookies" method="post">
+    @if (ViewBag.CookieValue != null)
+    {
+        <p>Значення куки: @ViewBag.CookieValue</p>
+    }
+    else
+    {
+        <p>Куки не знайдено</p>
+    }
+
+    <label for="value">Значення:</label>
+    <input type="text" id="value" name="value" value=""><br><br>
+
+
+    <label for="expiration">Дата та час :</label>
+    <input type="datetime-local" id="expiration" name="expiration"><br><br>
+
+    <input type="submit" value="Відправити">
+</form>

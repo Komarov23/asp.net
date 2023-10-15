@@ -13,7 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<CalcService>();
 builder.Services.AddControllers();
 builder.Services.AddTransient<TimeOfDayService>();
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
+app.UseErrorLoggingMiddleware();
 app.MapControllers();
 
 
